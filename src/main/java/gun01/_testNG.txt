@@ -22,22 +22,24 @@ TestNG Avantajlı Özellikleri :
 
 
 
+@BeforeSuite                        // Herseyden önce baslayan method
 
-
-
-
-
-@BeforeSuite
-    @BeforeTest
-        @BeforeGroups
-            @BeforeClass
-                @BeforeMethod
+    @BeforeTest                     // Bir Thread'de Yürütülen testler grubu
+        @BeforeGroups               // TestNG gruplar olusturulabilir, bu gruplar öncesi
+            @BeforeClass            // O Class öncesi
+                @BeforeMethod       // @Test annotation'i olan methodlar
 
                 @AfterMethod
             @AfterClass
         @AfterGroups
     @AfterTest
-@AfterSuite
+
+@AfterSuite     // Herseyden sonra calisan method
+
+
+
+
+
 
 
 
