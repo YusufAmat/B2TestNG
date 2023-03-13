@@ -40,6 +40,25 @@ TestNG Avantajlı Özellikleri :
 
 
 
+Suite
+    Test1
+        Class1
+            Method1
+            Method2
+
+        Class2
+            Method1
+            Method2
+
+    Test2
+        Class21
+            Method1
+            Method2
+
+        Class22
+            Method1
+            Method2
+
 
 
 
