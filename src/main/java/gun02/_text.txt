@@ -1,0 +1,4 @@
+--remote-allow-origins=*
+--headless
+start-maximized
+user-data-dir=

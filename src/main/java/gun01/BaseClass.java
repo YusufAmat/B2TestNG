@@ -1,8 +1,20 @@
 package gun01;
 
 import org.testng.annotations.*;
+import utils.Driver;
 
 public class BaseClass {
+
+    @BeforeSuite
+    public void beforeSuite(){
+        System.out.println("BeforeSuite");
+    }
+
+    @AfterSuite
+    public void afterSuite(){
+        System.out.println("AfterSuite");
+    }
+
 
     @AfterTest
     public void afterTest(){

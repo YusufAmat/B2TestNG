@@ -8,15 +8,6 @@ import org.testng.annotations.Test;
 
 public class Test1Giris extends BaseClass{
 
-    @BeforeSuite
-    public void beforeSuite(){
-        System.out.println("BeforeSuite");
-    }
-
-    @AfterSuite
-    public void afterSuite(){
-        System.out.println("AfterSuite");
-    }
 
     @Test
     public void test3(){
@@ -33,6 +24,7 @@ public class Test1Giris extends BaseClass{
     public void test2(){
         System.out.println("Test2");
     }
+
 
 
     // TestNG, bir öncelik ya da bagimlilik yoksa isim siralamasina göre run eder.
