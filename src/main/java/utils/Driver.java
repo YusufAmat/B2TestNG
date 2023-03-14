@@ -9,6 +9,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
+    public static void main(String[] args) {
+        System.getProperties().forEach((k,v)-> System.out.println(k + " : " + v));
+    }
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
@@ -29,7 +32,10 @@ public class Driver {
                 default:
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions options = new ChromeOptions();
-                    options.addArguments("--remote-allow-origins=*");
+                    options.addArguments("--remote-allow-origins=*");       // version 111 socket hatasi icin
+                    //options.addArguments("--start-maximized");              // ilk acilista maximized acilir
+                    //options.addArguments("--headless");                   // arka planda calisir
+                    //options.addArguments("user-data-dir=" + System.getProperty("user.home") + "\\AppData\\Local\\Google\\Chrome\\User Data");
                     driver = new ChromeDriver(options);
                     break;
             }
