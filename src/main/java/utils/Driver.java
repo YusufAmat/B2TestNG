@@ -9,9 +9,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
-    public static void main(String[] args) {
-        System.getProperties().forEach((k,v)-> System.out.println(k + " : " + v));
-    }
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
