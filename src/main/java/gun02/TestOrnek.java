@@ -11,16 +11,18 @@ import java.util.List;
 public class TestOrnek extends TestOrnekBase{
 
 
+
     By lUsername = By.cssSelector("input[name='username']");
     By lPassword = By.cssSelector("input[name='password']");
     By lSubmitButton = By.cssSelector("button[type='submit']");
-    By lSidePanel = By.cssSelector(".oxd-sidepanel");
-    By lSidePanemAdmin = By.xpath(".//a[.='Admin']");
+    By lSidePanemAdmin = By.xpath(".//aside//a[.='Admin']");
     By lDropdownRole = By.xpath(".//label[.='User Role']/ancestor::div[contains(@class,'oxd-grid-item')]");
+    //By lDropdownRole = By.xpath(".(//div[@class='oxd-select-wrapper'])[1]");
 
     By lOptionAdmin = By.xpath(".//div[@role='option' and .='Admin']");
     By lSearchButton = By.xpath("//button[@type='submit' and contains(., 'Search')]");
     By lTableCell3 = By.xpath("//div[@role='table']//div[contains(@class,'oxd-table-cell')][3]");
+    //By lTableCell3 = By.xpath("//div[@class='oxd-table-body']/div/div/div[3]");
 
     String url = "https://opensource-demo.orangehrmlive.com/";
 
