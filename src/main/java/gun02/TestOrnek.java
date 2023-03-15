@@ -1,6 +1,7 @@
 package gun02;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -8,23 +9,11 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
+import static gun02.Locators.*;
+
 public class TestOrnek extends TestOrnekBase{
 
 
-
-    By lUsername = By.cssSelector("input[name='username']");
-    By lPassword = By.cssSelector("input[name='password']");
-    By lSubmitButton = By.cssSelector("button[type='submit']");
-    By lSidePanemAdmin = By.xpath(".//aside//a[.='Admin']");
-    By lDropdownRole = By.xpath(".//label[.='User Role']/ancestor::div[contains(@class,'oxd-grid-item')]");
-    //By lDropdownRole = By.xpath(".(//div[@class='oxd-select-wrapper'])[1]");
-
-    By lOptionAdmin = By.xpath(".//div[@role='option' and .='Admin']");
-    By lSearchButton = By.xpath("//button[@type='submit' and contains(., 'Search')]");
-    By lTableCell3 = By.xpath("//div[@role='table']//div[contains(@class,'oxd-table-cell')][3]");
-    //By lTableCell3 = By.xpath("//div[@class='oxd-table-body']/div/div/div[3]");
-
-    String url = "https://opensource-demo.orangehrmlive.com/";
 
     @BeforeTest
     public void gotoUrl(){
