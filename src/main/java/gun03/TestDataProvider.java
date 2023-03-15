@@ -7,16 +7,18 @@ import java.util.Scanner;
 
 public class TestDataProvider {
 
+    // Test methodunun dataprovider'i
+    // ya @DataProvider'in name'i ile ya da @DataProvider'in method ismi ile cagrilir
     @Test(dataProvider = "myData")
-    public void test1(int num){
-
+    public void test1(int num){     //dataProvider'dan gelen degisken türü ve
+                                    // sayisi methoda parametre olarak girilir
         System.out.println(num);
 
     }
 
 
-    // Dataprovider --> test methodlari icin data kaynagidir
-    // return Object[][]
+    // Dataprovider --> test methodlari icin data kaynagidir, @DataProvider annotation'u ile belirtilir
+    // 2 boyutlu Object return etmek zorundadir. return Object[][]
     @DataProvider(name = "myData")
     public Object[][] getData(){
         return new Object[][]
