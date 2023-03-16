@@ -37,7 +37,7 @@ public class ProgressBar extends ProgressBarBase {
     }
 
 
-    @Test(priority = -100, dependsOnMethods = {"gotoUrl"})
+    @Test(priority = -10, dependsOnMethods = {"gotoUrl"})
     public void barProcess() {
         click(lButton);
         while (true) {
@@ -52,7 +52,7 @@ public class ProgressBar extends ProgressBarBase {
     }
 
 
-    @Test(priority = -100, dependsOnMethods = {"gotoUrl"})
+    @Test(priority = -100, dependsOnMethods = {"gotoUrl", "barProcess"})
     public void barProcess2() {
         click(lButton);
         By lProgresbar80 = By.xpath("//div[@role='progressbar' and text()='80%']");
