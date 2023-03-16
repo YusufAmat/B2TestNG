@@ -1,8 +1,11 @@
 package gun04.listener;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+
+@Listeners(Listener1.class)
 public class TestListener {
 
     @Test(priority = 1)
