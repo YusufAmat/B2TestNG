@@ -5,8 +5,16 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-@Listeners(Listener1.class)
+@Listeners(TestListenerClass.class)
 public class TestListener {
+
+    /*
+        Listener, testlerin yürütülmesi esnasinda test baslama, bitis, success, pass ya da skip
+        durumlarinin yakalanmasi ve istenilen islemin ya da raporun hazirlanmasi icin kullanilir
+        @Before... ve @After... annotations ile önce ve sonra yapilacak islemler yapilabilir
+        ancak test sonuclari ya da durumu ile ilgili bilgi edinilemez.
+        Test durumlarinin yakalanmasi icin listener'a ihtiyac duyulur.
+     */
 
     @Test(priority = 1)
     public void test1(){

@@ -1,6 +1,6 @@
 package gun04.progressbar;
 
-import gun04.listener.Listener1;
+import gun04.listener.TestListenerClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +14,7 @@ import java.time.Duration;
 
 import static gun04.progressbar.ProgressBarLocators.*;
 
-@Listeners(Listener1.class)
+@Listeners(TestListenerClass.class)
 public class ProgressBar extends ProgressBarBase {
 
 

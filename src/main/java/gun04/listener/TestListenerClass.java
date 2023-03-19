@@ -4,7 +4,20 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listener1 implements ITestListener {
+/*
+    TestNG listener olusturmak icin
+    1.  Bir class ITestListener'i implement eder
+    2.  Generate -> Implement methods ile istenilen methodlar eklenir.
+    3.  onStart         -> test basladiginda
+        onTestStart     -> test methodu basladiginda
+        onTestSuccess   -> test methodu basarili oldugunda
+        onTestFailure   -> test methodu basarisiz oldugunda
+        onTestSkipped   -> test methodu skip oldugunda
+        onFinish        -> test tamamlandiginda     calisirlar
+
+ */
+
+public class TestListenerClass implements ITestListener {
     @Override
     public void onTestStart(ITestResult result) {
         System.out.println("test basladi");
