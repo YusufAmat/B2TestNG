@@ -1,5 +1,6 @@
 package gun06.pom;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +19,7 @@ public class HomePage {
     @FindBy(css = "#search input")
     public WebElement searchBox;
 
-    @FindBy(how = How.CSS, using = "#search button")
+    @FindBy(how = How.XPATH, using = "//div[@id='search']//button")
     public WebElement searchButton;
 
     @FindBy(css = ".product-layout")
@@ -35,6 +36,7 @@ public class HomePage {
     }
 
     public void search(String text){
+        //driver.findElement(By.cssSelector("#search input")).sendKeys(text);
         searchBox.sendKeys(text);
     }
 
