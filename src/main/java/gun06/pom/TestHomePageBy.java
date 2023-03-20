@@ -1,11 +1,13 @@
 package gun06.pom;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+import utils.Driver;
 
 public class TestHomePageBy {
 
-    WebDriver driver;
+    //WebDriver driver;
 
     HomePageBy homePage;
 
@@ -15,9 +17,18 @@ public class TestHomePageBy {
         homePage = new HomePageBy();
 
         homePage.gotoUrl();
+        homePage.search("mac");
+        homePage.clickSearchButton();
+        int num = homePage.getNumberOfListedProducts();
+        System.out.println(num);
+
 
     }
 
+    @AfterTest
+    public void tearDown(){
+        Driver.quitDriver();
+    }
 
 
 }
