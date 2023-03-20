@@ -39,6 +39,7 @@ public class Element {
     public void _open(String url){
         driver.get(url);
     }
+
     public void click(){
         element.click();
     }
@@ -67,15 +68,14 @@ public class Element {
     }
 
     public Element textShouldBe(String text){
-        wait.until(d -> {
+        wait.until(driver1 -> {
             try{
-                if (!driver.findElement(locator).getText().equalsIgnoreCase(text))
+                if (!driver1.findElement(locator).getText().equalsIgnoreCase(text))
                     throw new Exception();
                 return true;
             }catch (Exception e){
                 return false;
             }
-
         });
         return this;
     }

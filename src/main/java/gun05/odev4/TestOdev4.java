@@ -28,8 +28,8 @@ public class TestOdev4 {
     @Test(dependsOnMethods = {"testLogin"}, priority = 1)
     public void addUser() {
         $(xpath(MENU_LINK, "Admin")).shouldBe(Conditions.clickable).click();
-        $(xpath(BUTTON, "Add")).click();
-        $(xpath(DROPDOWN, "User Role")).click();
+        $(xpath(BUTTON, "Add")).shouldBe(Conditions.visible).click();
+        $(xpath(DROPDOWN, "User Role")).shouldBe(Conditions.clickable).click();
         $(xpath(DROPDOWN_OPTION, "ESS")).click();
         $(xpath(DROPDOWN, "Status")).click();
         $(xpath(DROPDOWN_OPTION, "Enabled")).click();

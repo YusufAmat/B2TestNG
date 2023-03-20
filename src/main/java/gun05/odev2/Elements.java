@@ -8,7 +8,6 @@ import utils.Driver;
 import java.time.Duration;
 
 public enum Elements {
-
     INPUT("//label[contains(text(),'%s')]/ancestor::div[starts-with(@class,'oxd-input-group')]//input"),
     DROPDOWN("//label[contains(text(),'%s')]/ancestor::div[starts-with(@class,'oxd-grid-item')]//div[@class='oxd-select-wrapper']"),
     DROPDOWN_OPTION("//div[@role='option' and .//*[contains(.,'%s')]]"),

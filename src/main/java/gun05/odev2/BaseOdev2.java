@@ -33,33 +33,6 @@ public class BaseOdev2 {
         Driver.quitDriver();
     }
 
-    public void click(By locator) {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        click(element);
-    }
-
-    public void click(WebElement element) {
-        element.click();
-    }
-
-    public void clickByAction(By locator) {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
-        clickByAction(element);
-    }
-    public void clickByAction(WebElement element) {
-        new Actions(driver).moveToElement(element).click().perform();
-    }
-
-    public void sendKeys(By locator, CharSequence...text) {
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        sendKeys(element, text);
-    }
-
-    public void sendKeys(WebElement element, CharSequence...text) {
-        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(element));
-        element1.sendKeys(text);
-    }
-
     public WebElement element(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }

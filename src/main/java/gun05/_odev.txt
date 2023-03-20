@@ -1,5 +1,5 @@
 1.  https://opensource-demo.orangehrmlive.com/
-2.  Logi olunuz
+2.  Login olunuz
 3.  Admin linkine tiklayin
 4.  Add butonu ile kullanici eklenecek
 5.  Ismi cecil olani employee olarak secin
