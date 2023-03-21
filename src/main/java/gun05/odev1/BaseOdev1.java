@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
+import utils.Browsers;
 import utils.Driver;
 
 import java.time.Duration;
@@ -23,9 +23,10 @@ public class BaseOdev1 {
     /**
      * driver ve wait set ediliyor
      */
-    @BeforeSuite
-    public void setup() {
-        driver = Driver.getDriver();
+    @Parameters("browser")
+    @BeforeTest
+    public void setup(@Optional("chrome") String browser) {
+        driver = Driver.getDriver(Browsers.valueOf(browser.toUpperCase()));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
@@ -33,7 +34,7 @@ public class BaseOdev1 {
     /**
      * driver quit ediliyor
      */
-    @AfterSuite
+    @AfterTest
     public void tearDown() {
         Driver.quitDriver();
     }
