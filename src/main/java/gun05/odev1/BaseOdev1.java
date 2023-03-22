@@ -29,6 +29,7 @@ public class BaseOdev1 {
         driver = Driver.getDriver(Browsers.valueOf(browser.toUpperCase()));
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
     }
 
     /**
