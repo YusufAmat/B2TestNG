@@ -10,7 +10,7 @@ import utils.Driver;
 
 import java.time.Duration;
 
-public class HomePage {
+public class HomePage1 {
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -43,13 +43,13 @@ public class HomePage {
 
 
 
-    public HomePage(WebDriver driver){
+    public HomePage1(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
 
-    public HomePage(){
+    public HomePage1(){
         driver = Driver.getDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);

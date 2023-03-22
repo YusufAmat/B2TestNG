@@ -1,14 +1,16 @@
 package gun08;
 
 import org.testng.annotations.Test;
+import utils.Driver;
+
 
 public class TestParallel extends TestParallelBase {
 
-    HomePage hp = new HomePage();
-
+    HomePage1 hp;
     @Test
     public void test1(){
-        hp.gotoUrl();
+        hp = new HomePage1();
+        Driver.getDriver().get(hp.url);
     }
 
     @Test(dependsOnMethods = "test1")

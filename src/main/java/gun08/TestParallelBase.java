@@ -1,8 +1,6 @@
 package gun08;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -17,17 +15,13 @@ public class TestParallelBase {
     @BeforeTest
     public void beforeTest(){
 
-
         driver = Driver.getDriver();
-        /*
-            driver
-            wait tanimla
-         */
+        driver.manage().window().maximize();
     }
 
     @AfterTest
     public void afterTest(){
-        // quit
+        Driver.quitDriver();
     }
 
 
