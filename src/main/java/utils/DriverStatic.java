@@ -7,27 +7,24 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Driver {
+public class DriverStatic {
 
-    //private static WebDriver driver;
-    private static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
+    private static WebDriver driver;
 
     public static WebDriver getDriver(){
         return getDriver(Browsers.CHROME);
     }
 
     public static WebDriver getDriver(Browsers browser){
-        //if (driver == null){
-        if (drivers.get() == null){
+        if (driver == null){
             switch (browser){
                 case FIREFOX:
                     WebDriverManager.firefoxdriver().setup();
-                    //driver = new FirefoxDriver();
-                    drivers.set(new FirefoxDriver());
+                    driver = new FirefoxDriver();
                     break;
                 case EDGE:
                     WebDriverManager.edgedriver().setup();
-                    drivers.set(new EdgeDriver());
+                    driver = new EdgeDriver();
                     break;
                 default:
                     WebDriverManager.chromedriver().setup();
@@ -36,17 +33,17 @@ public class Driver {
                     //options.addArguments("--start-maximized");              // ilk acilista maximized acilir
                     //options.addArguments("--headless");                   // arka planda calisir
                     //options.addArguments("user-data-dir=" + System.getProperty("user.home") + "\\AppData\\Local\\Google\\Chrome\\User Data");
-                    drivers.set(new ChromeDriver(options));
+                    driver = new ChromeDriver(options);
                     break;
             }
         }
-        return drivers.get();
+        return driver;
     }
 
     public static void quitDriver(){
-        if (drivers.get() != null) {
-            drivers.get().quit();
-            drivers.set(null);
+        if (driver != null) {
+            driver.quit();
+            driver = null;
         }
     }
 
