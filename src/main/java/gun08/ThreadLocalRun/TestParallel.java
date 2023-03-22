@@ -1,4 +1,4 @@
-package gun08;
+package gun08.ThreadLocalRun;
 
 import org.testng.annotations.Test;
 import utils.Driver;

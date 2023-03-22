@@ -1,4 +1,4 @@
-package gun08;
+package gun08.ThreadLocalRun;
 
 public class ThreadLocalClass {
 
