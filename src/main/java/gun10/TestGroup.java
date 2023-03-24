@@ -25,7 +25,7 @@ public class TestGroup {
     }
 
 
-    @Test(groups = "C")
+    @Test(groups = "B")
     public void test4() {
         Assert.assertEquals(4, 4, "Message Test4");
     }
