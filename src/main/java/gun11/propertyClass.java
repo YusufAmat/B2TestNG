@@ -1,6 +1,7 @@
 package gun11;
 
 import org.testng.annotations.Test;
+import utils.ConfigReader;
 
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -74,10 +75,12 @@ public class propertyClass {
         fileReader.close();
         fileWriter.close();
 
+    }
 
-
-
-
+    @Test
+    public void testDeneme(){
+        String browser = ConfigReader.get("browser");
+        System.out.println(browser);
     }
 
 }
