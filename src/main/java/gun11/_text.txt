@@ -1,0 +1,14 @@
+1.  Yeni bir proje acin
+
+2.  pomu yapilandirin
+    selenium, testng, webdriver manager
+
+3. main -> java -> utils packagesi olusturun
+    Driver  (Thread local)
+
+4. main -> resources
+            config.properties
+                browser =
+                site1.url =
+                site1.user =
+                site1.pass =
