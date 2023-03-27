@@ -3,6 +3,7 @@ package gun11;
 import org.testng.annotations.Test;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -48,6 +49,35 @@ public class propertyClass {
         });
 
         fileReader.close();
+    }
+
+
+    @Test
+    public void writePropertyFromFile() throws IOException {
+
+        Properties properties = new Properties();
+
+        FileReader fileReader = new FileReader("src/main/java/gun11/config.properties");
+
+        properties.load(fileReader);
+
+        properties.remove("a");
+        properties.remove("b");
+
+        properties.put("browser", "firefox");
+
+        FileWriter fileWriter = new FileWriter("src/main/java/gun11/config.properties");
+
+        properties.store(fileWriter,"Aciklama 2");
+
+
+        fileReader.close();
+        fileWriter.close();
+
+
+
+
+
     }
 
 }

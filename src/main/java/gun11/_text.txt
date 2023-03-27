@@ -5,6 +5,7 @@
 
 3. main -> java -> utils packagesi olusturun
     Driver  (Thread local)
+    ConfigReader
 
 4. main -> resources
             config.properties
